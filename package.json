@@ -12,6 +12,7 @@
     "electron:dev": "electron electron/main.js"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.90.19",
     "axios": "^1.13.2",
     "crypto-js": "^4.2.0",
     "electron": "^40.0.0",

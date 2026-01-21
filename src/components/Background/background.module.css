@@ -1,0 +1,46 @@
+.background {
+  height: 100%;
+  width: 100%;
+  background-color: #2b2b2b;
+  /* filter: blur(10px); */
+}
+
+.ellipse_1 {
+  width: 150px;
+  height: 150px;
+  border-radius: 120px;
+  background-color: #ff0000;
+  position: fixed;
+  left: 93px;
+  bottom: -30px;
+}
+
+.ellipse_2 {
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+  background-color: #59ff00;
+  position: fixed;
+  left: 93px;
+  top: 18px;
+}
+
+.ellipse_3 {
+  width: 240px;
+  height: 240px;
+  border-radius: 120px;
+  background-color: #5542ff;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -60px;
+}
+
+.blurOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(195px);
+}

@@ -1,7 +1,12 @@
 import "./App.css";
+import Routing from "./core/Routing";
 
 function App() {
-  return <button>Click</button>;
+  return (
+    <div className="app">
+      <Routing />
+    </div>
+  );
 }
 
 export default App;
