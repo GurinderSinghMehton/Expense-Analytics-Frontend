@@ -1,0 +1,80 @@
+.inputWrapper {
+  height: 50px;
+  width: 100%;
+  position: relative;
+
+  border-radius: 12px;
+  background-color: #d9d9d921;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.inputWrapper .input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  /* font-size: 0.9rem; */
+  color: white;
+  width: 100%;
+  caret-color: var(--primary-text);
+  margin-top: 10px;
+  font-family: "Poppins-Light";
+}
+
+.errorBorder {
+  outline: 1.7px solid var(--error-text);
+}
+
+.errorBorder .input {
+  caret-color: var(--error-text);
+  color: var(--error-text);
+}
+
+.label {
+  position: absolute;
+  font-size: 1rem;
+  color: var(--primary-text);
+  font-family: "Poppins-Light";
+  transition: all 0.2s ease-out;
+}
+
+.labelActive {
+  /* top: 5px; */
+  transform: translateY(-13px);
+  font-size: 10px;
+}
+
+.pswBox {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.pswBox input[type="checkbox"] {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 20%;
+  border: 1px solid white;
+  appearance: none;
+
+  outline: none;
+}
+
+.pswBox input[type="checkbox"]:checked {
+  background-color: #b4b4f0;
+  border: 1px solid #b4b4f0;
+}
+
+.pswBox label {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: "Poppins-Light";
+  cursor: pointer;
+}
+
+.errorLabel {
+  color: var(--error-text);
+}

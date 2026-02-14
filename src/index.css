@@ -1,8 +1,31 @@
+@import "./globalStyles/fonts.css";
+
 :root {
+  --primary-text: #dbdbdb;
+  --error-text: #d10000;
 }
 
-body {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: "Poppins-Regular";
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Poppins-Light";
+  color: var(--primary-text);
+}
+
+.heading-small {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Poppins-Light";
+  color: var(--primary-text);
 }

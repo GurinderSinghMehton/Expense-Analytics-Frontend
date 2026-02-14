@@ -1,0 +1,23 @@
+.customBtn {
+  height: 40px;
+  width: 150px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-family: "Poppins-Medium";
+  font-size: 0.9rem;
+  background: linear-gradient(45deg, #f8ba80, #d36f4c);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customBtn.disabled {
+  opacity: 40%;
+  background: linear-gradient(45deg, #383838, #9b8989);
+  border: 1px solid rgb(158, 158, 158);
+  cursor: not-allowed;
+  color: whitesmoke;
+}
