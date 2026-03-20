@@ -38,6 +38,7 @@ function Input({
   const [isActive, setIsActive] = useState<boolean>(false);
   const [hasValue, setHasValue] = useState<boolean>(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const checkBoxRef = useRef<HTMLInputElement>(null);
 
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
@@ -173,8 +174,11 @@ function Input({
             id="showPsd"
             checked={showPassword}
             onChange={() => setShowPassword(!showPassword)}
+            ref={checkBoxRef}
           />
-          <label htmlFor="showPsd">Show Password</label>
+          <label onClick={() => checkBoxRef.current?.click()}>
+            Show Password
+          </label>
         </div>
       )}
     </>

@@ -107,3 +107,9 @@
   text-underline-offset: 2px;
   user-select: none;
 }
+
+.passwordBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

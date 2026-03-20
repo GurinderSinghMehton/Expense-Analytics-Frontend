@@ -1,0 +1,7 @@
+.mainContainer {
+  position: fixed;
+  inset: 1px;
+  display: flex;
+}
+
+

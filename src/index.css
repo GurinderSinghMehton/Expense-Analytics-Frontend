@@ -29,3 +29,10 @@ body {
   font-family: "Poppins-Light";
   color: var(--primary-text);
 }
+
+.paragraph{
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: "Poppins-Light";
+  color: var(--primary-text);
+}

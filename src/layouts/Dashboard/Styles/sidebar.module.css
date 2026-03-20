@@ -1,0 +1,42 @@
+.sidebarConatiner {
+  width: 256px;
+  height: 100%;
+  background-color: #131313;
+  /* opacity: 80%; */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.logo {
+  height: 55px;
+  width: 55px;
+  padding: 8px;
+  border: 2px solid white;
+  border-radius: 12px;
+  box-shadow: 0px 1px 90px #f68b6f;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.headerTextBox {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.optionsMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 8.5px;
+}

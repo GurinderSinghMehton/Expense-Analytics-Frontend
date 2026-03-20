@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, Menu } from "electron";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -14,6 +14,7 @@ function createWindow() {
   });
 
   const startURL = `http://localhost:5173`;
+  // Menu.setApplicationMenu(null);
   window.loadURL(startURL);
 }
 

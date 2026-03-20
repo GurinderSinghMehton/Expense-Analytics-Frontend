@@ -1,32 +1,41 @@
-import styles from "../Styles/auth.module.css";
-import { Logo } from "../../../assets";
+import React, { useState } from "react";
 import Input from "../../../components/Input/Input";
-import { useState } from "react";
+import styles from "../Styles/auth.module.css";
 import Button from "../../../components/Button/Button";
+import { Logo } from "../../../assets";
 import { useNavigate } from "react-router-dom";
 
-function Login() {
-  const navigate = useNavigate();
-
+function SignUp() {
   const [formData, setFormData] = useState<{
+    username: string;
     email: string;
     password: string;
+    confirmPassword: string;
   }>({
+    username: "",
     email: "",
     password: "",
+    confirmPassword: "",
   });
 
-  function handleNavigateToSignup() {
-    navigate("/signup");
+  const navigate = useNavigate();
+
+  function handleNavigateToLogin() {
+    navigate("/");
   }
 
-  async function handleLogin() {
-    // temp: for now.
+  async function handelSignUp() {
+    // temp: for now
     navigate("/dashboard");
   }
 
   const isDisabled =
-    formData.email.length <= 0 || formData.password.length <= 0 ? true : false;
+    formData.email.length <= 0 ||
+    formData.password.length <= 0 ||
+    formData.username.length <= 0 ||
+    formData.confirmPassword.length <= 0
+      ? true
+      : false;
 
   return (
     <div className={styles.dialogBox}>
@@ -42,6 +51,14 @@ function Login() {
         <h4 className="heading">Welcome to Expensa.</h4>
         <div className={styles.inputBox}>
           <Input
+            placeholder="Username"
+            type="text"
+            value={formData.username}
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, username: e.target.value }))
+            }
+          />
+          <Input
             placeholder="Email"
             type="text"
             value={formData.email}
@@ -50,7 +67,7 @@ function Login() {
             }
           />
 
-          <div>
+          <div className={styles.passwordBox}>
             <Input
               placeholder="Password"
               type="password"
@@ -59,19 +76,34 @@ function Login() {
                 setFormData((prev) => ({ ...prev, password: e.target.value }))
               }
             />
-            <span className={styles.forgetPassword}>Forget password?</span>
+            <Input
+              placeholder="Confirm Password"
+              type="password"
+              value={formData.confirmPassword}
+              onChange={(e) =>
+                setFormData((prev) => ({
+                  ...prev,
+                  confirmPassword: e.target.value,
+                }))
+              }
+            />
           </div>
         </div>
 
         <div className={styles.btnContainer}>
           <Button
-            children="Login"
+            children="Sign Up"
             disabled={isDisabled}
-            onClick={handleLogin}
+            onClick={handelSignUp}
           />
-          <span className={styles.btnText} onClick={handleNavigateToSignup}>
-            <span>Don't have account?</span>
-            <span className={styles.createAccount}>Create a Account</span>
+          <span className={styles.btnText}>
+            <span>Already have account.</span>
+            <span
+              className={styles.createAccount}
+              onClick={handleNavigateToLogin}
+            >
+              Login
+            </span>
           </span>
         </div>
       </div>
@@ -79,4 +111,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SignUp;

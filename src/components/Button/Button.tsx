@@ -6,13 +6,15 @@ interface propType {
   disabled?: boolean;
   children: string | React.ReactNode;
   loading?: boolean;
+  onClick: () => void;
 }
 
-function Button({ children, disabled, loading }: propType) {
+function Button({ children, disabled, loading, onClick }: propType) {
   return (
     <button
       className={`${styles.customBtn} ${disabled ? styles.disabled : ""}`}
       disabled={disabled || loading}
+      onClick={onClick}
     >
       {loading ? <CircleLoader /> : children}
     </button>
